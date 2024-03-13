@@ -141,3 +141,8 @@ Route::get('receber/nome', function (Request $request){
             $resultado2 = $produto + $resultado; 
              return 'O salario é de ' . $produto . ', com o aumento de ' . $desconto . '%, o salario dele será de ' . $resultado2;    
             });
+            Route::get('fidelidade', function(Request $request){
+                $produto = $request->input('number1');
+                $resultado = $produto / 10;
+                return 'O valor gasto é de ' . $produto . ', com os seus pontos são ' . $resultado ;
+            });
