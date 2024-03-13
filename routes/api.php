@@ -146,3 +146,10 @@ Route::get('receber/nome', function (Request $request){
                 $resultado = $produto / 10;
                 return 'O valor gasto é de ' . $produto . ', com os seus pontos são ' . $resultado ;
             });
+            Route::get('comissao', function(Request $request){
+                $produto = $request->input('number1');
+            $desconto = $request->input('number2');
+            $resultado = $desconto / 100 * $produto;
+            $resultado2 = $produto + $resultado; 
+             return 'O salario é de ' . $produto . ', com sua comissão de ' . $desconto . '%, o salario dele será de ' . $resultado2;
+            });
