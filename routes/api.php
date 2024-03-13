@@ -134,3 +134,10 @@ Route::get('receber/nome', function (Request $request){
             $resultado2 = $produto - $resultado; 
              return 'O preço do produto custa ' . $produto . ', com o desconto de ' . $desconto . ' %, ficará ' . $resultado2;
             });
+            Route::get('salariobase' , function(Request $request){
+                $produto = $request->input('number1');
+            $desconto = $request->input('number2');
+            $resultado = $desconto / 100 * $produto;
+            $resultado2 = $produto + $resultado; 
+             return 'O salario é de ' . $produto . ', com o aumento de ' . $desconto . '%, o salario dele será de ' . $resultado2;    
+            });
