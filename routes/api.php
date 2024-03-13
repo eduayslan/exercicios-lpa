@@ -16,3 +16,9 @@ Route::get('receber/nome', function (Request $request){
         $media = ($primeiraEntrada + $segundaEntrada)/2;
         return $media;
     });
+    Route::get('senia', function(Request $request){
+        $nome = $request ->input('nome');
+        $idade = $request ->input('idade');
+    
+        return 'Meu nome é '. $nome . ', tenho ' . $idade . ' anos de idade';
+    });
