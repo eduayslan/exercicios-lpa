@@ -96,3 +96,15 @@ Route::get('receber/nome', function (Request $request){
         return $resultado;
     
     });
+    Route::get('calculadora/divisao/dois' , function (Request $request){
+    
+    
+        $primerioNumero = $request->input('numeroUm');
+    
+        $segundoNumero = $request->input('numeroDois');
+    
+        $resultado = $segundoNumero / $primerioNumero;
+    
+        return $resultado;
+    
+    });
