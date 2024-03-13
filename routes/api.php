@@ -117,3 +117,13 @@ Route::get('receber/nome', function (Request $request){
     
     
     });
+    Route::get('retangulo' , function(Request $request){
+        $primerioNumero = $request->input('number1');
+    
+        $segundoNumero = $request->input('number2');
+    
+        $resultado = $primerioNumero * $segundoNumero;
+    
+        return $resultado;
+
+        }); 
