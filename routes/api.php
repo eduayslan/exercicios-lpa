@@ -167,3 +167,9 @@ Route::get('receber/nome', function (Request $request){
             
                 return $resultado;
             });
+            Route::get('mercado', function (request $request){
+                $compra = $request->input('number1');
+                $produtos = $request->input('number2');
+                $resultado = "Valor do produto: " . $compra * $produtos;
+                return $resultado;
+            });
