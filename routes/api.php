@@ -108,3 +108,12 @@ Route::get('receber/nome', function (Request $request){
         return $resultado;
     
     });
+    Route::get('dobro' , function (Request $request){
+
+        $primerioNumero = $request->input('numero');
+        $resultado = $primerioNumero * '2';
+    
+        return ' O dobro do número ' . $primerioNumero . ' é ' . $resultado; 
+    
+    
+    });
