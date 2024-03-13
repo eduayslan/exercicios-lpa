@@ -127,3 +127,10 @@ Route::get('receber/nome', function (Request $request){
         return $resultado;
 
         }); 
+        Route::get('desconto' , function(Request $request){
+            $produto = $request->input('number1');
+            $desconto = $request->input('number2');
+            $resultado = $desconto / 100 * $produto;
+            $resultado2 = $produto - $resultado; 
+             return 'O preço do produto custa ' . $produto . ', com o desconto de ' . $desconto . ' %, ficará ' . $resultado2;
+            });
