@@ -153,3 +153,17 @@ Route::get('receber/nome', function (Request $request){
             $resultado2 = $produto + $resultado; 
              return 'O salario é de ' . $produto . ', com sua comissão de ' . $desconto . '%, o salario dele será de ' . $resultado2;
             });
+            Route::get('day', function (request $request) {
+    
+                $dias = $request->input('number1');
+            
+                $horas = $dias * 24;
+            
+                $minutos = $horas * 60;
+            
+                $segundos = $minutos * 60;
+            
+                $resultado = "dias: " . $dias . ", horas: " . $horas . ", minutos: " . $minutos . ", segundos: " . $segundos;
+            
+                return $resultado;
+            });
