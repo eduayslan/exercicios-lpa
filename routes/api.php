@@ -29,3 +29,16 @@ Route::get('receber/nome', function (Request $request){
 
         return 'Meu nome é '. $nome . ', nasci no ano de '. $idade . ' na cidade de '. $cidade ;
     });
+    Route::get('Calculadora' , function (Request $request){ 
+
+        $primerioNumero = $request->input('numeroUm');  
+    
+        $segundoNumero = $request->input('numeroDois');  
+    
+        $resultado = $primerioNumero + $segundoNumero; 
+    
+        return $resultado; 
+    
+        
+    
+    });
