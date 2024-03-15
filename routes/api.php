@@ -173,3 +173,14 @@ Route::get('receber/nome', function (Request $request){
                 $resultado = "Valor do produto: " . $compra * $produtos;
                 return $resultado;
             });
+            Route::get('exemplos', function (request $request){
+                $idade = $request->input('number1');
+                $retorno = "";
+                if($idade >= 18){
+                $retorno = "Maior de idade";
+                }
+                else{
+                    $retorno = "Menor de idade";
+                }
+                return $retorno;
+            });
