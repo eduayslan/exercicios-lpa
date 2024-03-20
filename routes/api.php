@@ -204,5 +204,67 @@ Route::get('receber/nome', function (Request $request){
                 } else{
                     return 'impar';
                 }
-                
+
             });
+
+            Route::get('impressão', function (Request $request){
+                $item = $request->input('number1');
+                $returne="";
+                if($item > 10){
+                    $returne = "É maior ";
+                }
+                else{
+                    $returne= "É menor ";
+                }
+                return $returne;
+            });
+
+            Route::get('temp', function (Request $request){
+                $temp = $request->input('number1');
+                $returne="";
+                if($temp <= 30){
+                    $returne = "A temperatura atual é $temp ";
+                }
+                else{
+                    $returne= "A temperatura atual é. $temp Está quente! ";
+                }
+                return $returne;
+            });
+
+            Route::get('programa/nm', function (Request $request){
+                $temp = $request->input('number1');
+                $returne="";
+                if($temp > 0){
+                    $returne = "O número é possitivo";
+                } else if ($temp == 0){
+                    $returne =  "Igual a 0";
+                }
+                else {
+                    $returne = "Numero negativo";
+                }
+                return $returne;
+            }); 
+
+            Route::get('maiorde/dois', function (Request $request){
+
+                $numero1 = $request->input('numero1');
+                $numero2 = $request->input('numero2');
+            
+                if($numero1 > $numero2){
+                    return "O número " . $numero1 . " é maior que " . $numero2;
+                } else {
+                    return "O número " . $numero1 . " é menor que " . $numero2;
+                }
+            
+            });
+
+            Route::get('divisivel', function (Request $request){
+
+                $numero = $request->input('number1');
+                if($numero % 3 == 0){
+                 return 'O número ' . $numero . " É divisivel por 3";
+                } else{
+                 return 'O número ' . $numero . " Não é divisivel por 3";
+                }
+             
+             });
