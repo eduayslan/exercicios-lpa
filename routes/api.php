@@ -153,7 +153,7 @@ Route::get('receber/nome', function (Request $request){
             $resultado2 = $produto + $resultado; 
              return 'O salario é de ' . $produto . ', com sua comissão de ' . $desconto . '%, o salario dele será de ' . $resultado2;
             });
-            Route::get('day', function (request $request) {
+            Route::get('day', function (Request $request) {
     
                 $dias = $request->input('number1');
             
@@ -167,13 +167,13 @@ Route::get('receber/nome', function (Request $request){
             
                 return $resultado;
             });
-            Route::get('mercado', function (request $request){
+            Route::get('mercado', function (Request $request){
                 $compra = $request->input('number1');
                 $produtos = $request->input('number2');
                 $resultado = "Valor do produto: " . $compra * $produtos;
                 return $resultado;
             });
-            Route::get('exemplos', function (request $request){
+            Route::get('exemplos', function (Request $request){
                 $idade = $request->input('number1');
                 $retorno = "";
                 if($idade >= 18){
@@ -185,7 +185,7 @@ Route::get('receber/nome', function (Request $request){
                 return $retorno;
             });
 
-            Route::get('caixafast', function (request $request){
+            Route::get('caixafast', function (Request $request){
                 $item = $request->input('number1');
                 $returne="";
                 if($item <= 10){
@@ -195,4 +195,14 @@ Route::get('receber/nome', function (Request $request){
                     $returne= "Não pode passar nesse caixa ";
                 }
                 return $returne;
+            });
+
+            Route::get('ver/par', function (Request $request){
+                $number = $request->input('number1');
+                if($number % 2 == 0){
+                    return 'par';
+                } else{
+                    return 'impar';
+                }
+                
             });
