@@ -184,3 +184,15 @@ Route::get('receber/nome', function (Request $request){
                 }
                 return $retorno;
             });
+
+            Route::get('caixafast', function (request $request){
+                $item = $request->input('number1');
+                $returne="";
+                if($item <= 10){
+                    $returne = "Pode passar nesse caixa ";
+                }
+                else{
+                    $returne= "Não pode passar nesse caixa ";
+                }
+                return $returne;
+            });
