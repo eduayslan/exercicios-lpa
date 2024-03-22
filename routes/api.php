@@ -177,7 +177,7 @@ Route::get('receber/nome', function (Request $request){
                 $idade = $request->input('number1');
                 $retorno = "";
                 if($idade >= 18){
-                $retorno = "Maior de idade";
+                $retorno = "Você é Maior de idade";
                 }
                 else{
                     $retorno = "Menor de idade";
@@ -268,3 +268,238 @@ Route::get('receber/nome', function (Request $request){
                 }
              
              });
+
+
+
+             Route::get('lista1', function (Request $request){
+                $number = $request->input('number1');
+                $returne="";
+                if($number > 10){
+                    $returne = "É maior que 10. ";
+                }
+                else{
+                    $returne= "É menor que 10. ";
+                }
+                return $returne;
+            });
+
+
+            Route::get('lista2', function (Request $request){
+                $temp = $request->input('number1');
+                $returne="";
+                if($temp > 0){
+                    $returne = "O número é possitivo";
+                } else if ($temp == 0){
+                    $returne =  "Igual a 0";
+                }
+                else {
+                    $returne = "Numero negativo";
+                }
+                return $returne;
+            }); 
+
+
+
+            Route::get('lista3', function (Request $request){
+                $idade = $request->input('number1');
+                $retorno = "";
+                if($idade >= 18){
+                $retorno = "Você é Maior de idade";
+                }
+                else{
+                    $retorno = "Menor de idade";
+                }
+                return $retorno;
+            });
+
+
+
+            Route::get('lista4', function (Request $request){
+                $number = $request->input('number1');
+                if($number % 2 == 0){
+                    return 'par';
+                } else{
+                    return 'impar';
+                }
+
+            });
+
+
+
+            Route::get('lista5', function (Request $request){
+
+                $numero1 = $request->input('number1');
+                $numero2 = $request->input('number2');
+            
+                if($numero1 > $numero2){
+                    return "O número " . $numero1 . " é maior que " . $numero2;
+                } else {
+                    return "O número " . $numero1 . " é menor que " . $numero2;
+                }
+            
+            });
+
+
+
+            Route::get('lista6', function (Request $request){
+
+                $numero = $request->input('number1');
+                if($numero % 9 == 0){
+                 return 'O número ' . $numero . " é divisivel por 9";
+                } else{
+                 return 'O número ' . $numero . " não é divisivel por 9";
+                }
+             
+             });
+
+
+
+             Route::get('lista7', function (Request $request){
+                $temp = $request->input('number1');
+                $returne="";
+                if($temp <= 30){
+                    $returne = "A temperatura atual é $temp ";
+                }
+                else{
+                    $returne= "A temperatura atual é. $temp Está quente! ";
+                }
+                return $returne;
+            });
+
+
+
+            Route::get('lista8', function (Request $request){
+                $number = $request->input('number1');
+                if($number % 7 == 0){
+                    return 'O número ' . $number . " é múltiplo de 7 ";
+                } else{
+                    return 'O número ' . $number . " não é múltiplo de 7 ";
+                }
+            });
+
+
+
+            Route::get('lista9', function (Request $request){
+                $idade = $request->input('number1');
+                $retorno = "";
+                if($idade < 12){
+                $retorno = "Você é uma criança";
+                }
+                else{
+                    $retorno = "Você tem mais de 12 anos ";
+                }
+                return $retorno; 
+            });
+
+
+
+            Route::get('lista10', function (Request $request){
+                $number = $request->input('number1');
+                if($number > 0){
+                    if($number % 2 != 0){
+                    return "O número é positivo e ímpar ";
+                    }}
+            });
+
+
+
+            Route::get('lista11', function (Request $request){
+                $number = $request->input('number1');
+                $returne="";
+                if($number > 100){
+                    $returne = "O número é maior que 100";
+                } else if ($number == 100){
+                    $returne =  "Número igual a 100";
+                }
+                else {
+                    $returne = "Numero é menor que 100";
+                }
+                return $returne;
+            }); 
+
+
+
+            Route::get('lista12', function (Request $request){
+
+                $number = $request->input('number1');
+                if($number % 6 == 0){
+                 return 'O número ' . $number . " é divisivel por 6";
+                } else{
+                 return 'O número ' . $number . " não é divisivel por 6";
+                }
+             
+             });
+
+
+
+             Route::get('lista13', function (Request $request){
+                $nome = $request->input('name');
+                if($nome =='Alice'){
+                    return "Olá, Alice";
+                }
+                
+            });
+
+
+
+            Route::get('lista14', function (Request $request){
+                $idade = $request->input('number1');
+                $carteira = $request->input('number2');
+
+                if($idade >= 18){
+                    if($carteira == 'Sim') {
+                    return "Você é maior de idade e possui carteira de motorista, então pode dirigir! ";
+                } 
+                else{
+                    return "Você não pode dirigir, pois não possui carteira de motorista";
+                }  
+            } else {
+                return "Você não pode dirigir! ";
+            } 
+            });
+
+
+
+            Route::get('lista16', function (Request $request){
+
+                $number1 = $request->input('number1');
+                $number2 = $request->input('number2');
+            
+                if($number1 < $number2){
+                    return "O número " . $number1 . " é menor que " . $number2;
+                } else {
+                    return "O número " . $number2 . " é menor que " . $number1;
+                }
+            
+            });
+
+
+
+            Route::get('lista17', function (Request $request){
+                $idade = $request->input('number1');
+                $name = $request->input('number2');
+
+                if($idade >= 18){
+                    if($name == 'Donatello') {
+                    return "Você é maior de idade, Donatello! ";
+                } 
+                
+            } 
+            });
+
+
+
+            Route::get('lista18', function (Request $request){
+
+                $number1 = $request->input('number1');
+                $number2 = $request->input('number2');
+               
+                    if($number1 == 0){
+                    return "Não é possível efetuar a divisão pois o primeiro número é zero ";
+                } else if ($number2 == 0){
+                    return "Não é possível efetuar a divisão pois o segundo número é zero ";
+            }else{
+                    $resultado = ($number1 / $number2);
+                    return "O resultado da divisão é " . $resultado;
+            }
+            });
