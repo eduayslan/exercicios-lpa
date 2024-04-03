@@ -503,3 +503,34 @@ Route::get('receber/nome', function (Request $request){
                     return "O resultado da divisão é " . $resultado;
             }
             });
+
+
+
+            Route::get('lista19', function (Request $request){
+        $number1 = $request->input('number1');
+        $number2 = $request->input('number2');
+        $resultado = $number1 * $number2;
+    
+        if ($resultado > 100 ){
+            return $resultado;
+        }else{
+            return $resultado;
+        }
+    
+            });
+
+
+
+            Route::get('lista20', function (Request $request){
+                $number1 = $request->input('number1');
+                $number2 = $request->input('number2');
+                $resultado = $number1 + $number2;
+
+                if($resultado % 2 == 0){
+                return $number1 * $number2; 
+                
+            } else if ($resultado % 2 != 0); 
+            {
+                return $number1 / $number2;
+            }
+        });
